@@ -10,6 +10,8 @@ NOTEBOOKS=$(wildcard *.ipynb)
 # Corresponding output files
 MDFILES=$(patsubst %.ipynb,%.md,$(NOTEBOOKS))
 MDDIRECS=$(patsubst %.md,%_files,$(MDFILES))
+FINALMDFILES=$(patsubst %.md,outputs/%.md,$(MDFILES))
+FINALMDDIRECS=$(patsubst %_files,outputs/%_files,$(MDDIRECS))
 md: $(MDFILES)
 
 # Define the commands that will do the conversion
@@ -26,5 +28,5 @@ move:
 
 # Remove the created files that are in outputs/
 clean:
-	rm -f outputs/$(MDFILES)
-	rm -r outputs/$(MDDIRECS)
+	rm -f $(FINALMDFILES)
+	rm -r $(FINALMDDIRECS)

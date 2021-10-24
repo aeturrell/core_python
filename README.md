@@ -1,9 +1,11 @@
 # core_python
 
-Python versions of exercises from the CORE Econ textbook
+Python versions of exercises from the CORE Econ textbook. Find the originals here: https://www.core-econ.org/doing-economics/index.html
 
-Command to convert notebooks to markdown is
+An example of the command to convert notebooks to markdown is
 
 ```python
 poetry run jupyter nbconvert empirical_project_1.ipynb --to markdown --output output.md
 ```
+
+Make is enabled for this project. To build all markdown documents, use `make`. To clean the `outputs/` folder, it's `make clean`.
