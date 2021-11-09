@@ -2,6 +2,7 @@
 outputs/*
 !outputs/.gitkeep
 !data/.gitkeep
+settings.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
