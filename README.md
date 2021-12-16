@@ -9,3 +9,7 @@ poetry run jupyter nbconvert empirical_project_1.ipynb --to markdown --output ou
 ```
 
 Make is enabled for this project. To build all markdown documents, use `make`. To clean the `outputs/` folder, it's `make clean`.
+
+## Handover Notes
+
+The links to Jupyter Notebook code for each project will need to be filled in.
