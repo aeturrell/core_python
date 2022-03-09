@@ -4,6 +4,8 @@ outputs/*
 !data/.gitkeep
 settings.json
 data/Project-8-datafile.xlsx
+scratch/*
+!scratch/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
