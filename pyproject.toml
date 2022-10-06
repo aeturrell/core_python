@@ -18,6 +18,8 @@ plotnine = "^0.8.0"
 rich = "^10.15.2"
 jupyter = "^1.0.0"
 skimpy = "^0.0.6"
+black-nb = "^0.7"
+regex = "^2022.9.13"
 
 [tool.poetry.dev-dependencies]
 jupytext = "^1.13.0"
