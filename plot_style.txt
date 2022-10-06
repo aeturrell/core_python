@@ -10,6 +10,7 @@ grid.color: E8E3E2
 axes.grid:          True   # display grid or not
 axes.grid.axis:     y    # which axis the grid should apply to
 axes.grid.which:    major   # grid lines at {major, minor, both} ticks
+axes.axisbelow: True
 axes.titlesize: 16
 legend.title_fontsize: 12
 xtick.labelsize: 12
