@@ -6,7 +6,10 @@ patch.facecolor        : bc80bd
 patch.force_edgecolor  : True
 patch.linewidth: 0.8
 scatter.edgecolors: black
-grid.color: b1afb5
+grid.color: E8E3E2
+axes.grid:          True   # display grid or not
+axes.grid.axis:     y    # which axis the grid should apply to
+axes.grid.which:    major   # grid lines at {major, minor, both} ticks
 axes.titlesize: 16
 legend.title_fontsize: 12
 xtick.labelsize: 12
@@ -35,7 +38,6 @@ axes.edgecolor: black
 axes.linewidth: 0.6
 axes.spines.right : False
 axes.spines.top : False
-axes.grid: False
 figure.titlesize: 18
 figure.dpi: 150
 figure.figsize: 6, 3
