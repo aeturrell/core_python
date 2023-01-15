@@ -17,7 +17,7 @@ toml = "^0.10.2"
 plotnine = "^0.8.0"
 rich = "^10.15.2"
 jupyter = "^1.0.0"
-skimpy = "^0.0.6"
+skimpy = "0.0.8"
 black-nb = "^0.7"
 regex = "^2022.9.13"
 
