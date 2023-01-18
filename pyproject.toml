@@ -20,6 +20,7 @@ jupyter = "^1.0.0"
 skimpy = "0.0.8"
 black-nb = "^0.7"
 regex = "^2022.9.13"
+html5lib = "^1.1"
 
 [tool.poetry.dev-dependencies]
 jupytext = "^1.13.0"
