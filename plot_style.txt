@@ -42,3 +42,4 @@ axes.spines.top : False
 figure.titlesize: 18
 figure.dpi: 150
 figure.figsize: 6, 3
+backend: svg
