@@ -788,6 +788,23 @@ dev = ["flit"]
 test = ["pytest", "black", "pre-commit", "flake8"]
 
 [[package]]
+name = "linkify-it-py"
+version = "1.0.3"
+description = "Links recognition library with FULL unicode support."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+uc-micro-py = "*"
+
+[package.extras]
+benchmark = ["pytest", "pytest-benchmark"]
+dev = ["pre-commit", "isort", "flake8", "black"]
+doc = ["sphinx", "sphinx-book-theme", "myst-parser"]
+test = ["coverage", "pytest", "pytest-cov"]
+
+[[package]]
 name = "littleutils"
 version = "0.2.2"
 description = "Small personal collection of python utility functions"
@@ -813,11 +830,12 @@ source = ["Cython (>=0.29.7)"]
 name = "markdown-it-py"
 version = "2.1.0"
 description = "Python port of markdown-it. Markdown parsing, done right!"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
+linkify-it-py = {version = ">=1.0,<2.0", optional = true, markers = "extra == \"linkify\""}
 mdurl = ">=0.1,<1.0"
 
 [package.extras]
@@ -870,10 +888,84 @@ python-versions = ">=3.5"
 traitlets = "*"
 
 [[package]]
+name = "mdformat"
+version = "0.7.16"
+description = "CommonMark compliant Markdown formatter"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+importlib-metadata = {version = ">=3.6.0", markers = "python_version < \"3.10\""}
+markdown-it-py = ">=1.0.0,<3.0.0"
+tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
+
+[[package]]
+name = "mdformat-footnote"
+version = "0.1.1"
+description = "An mdformat plugin for parsing/validating footnotes"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+mdformat = ">=0.7.8,<0.8.0"
+mdit-py-plugins = "*"
+
+[package.extras]
+dev = ["pre-commit"]
+test = ["pytest (>=6.0,<7.0)", "coverage", "pytest-cov"]
+
+[[package]]
+name = "mdformat-frontmatter"
+version = "2.0.1"
+description = "An mdformat plugin for parsing / ignoring frontmatter."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+mdformat = ">=0.7.0,<0.8.0"
+mdit-py-plugins = "*"
+"ruamel.yaml" = "*"
+
+[package.extras]
+dev = ["pre-commit"]
+test = ["pytest (>=6.0,<7.0)", "coverage", "pytest-cov"]
+
+[[package]]
+name = "mdformat-gfm"
+version = "0.3.5"
+description = "Mdformat plugin for GitHub Flavored Markdown compatibility"
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[package.dependencies]
+markdown-it-py = {version = "*", extras = ["linkify"]}
+mdformat = ">=0.7.5,<0.8.0"
+mdformat-tables = ">=0.4.0"
+mdit-py-plugins = ">=0.2.0,<0.4.0"
+
+[[package]]
+name = "mdformat-tables"
+version = "0.4.1"
+description = "An mdformat plugin for rendering tables."
+category = "main"
+optional = false
+python-versions = ">=3.6.1"
+
+[package.dependencies]
+mdformat = ">=0.7.5,<0.8.0"
+
+[package.extras]
+test = ["pytest (>=6.0,<7.0)", "coverage", "pytest-cov"]
+
+[[package]]
 name = "mdit-py-plugins"
 version = "0.3.1"
 description = "Collection of plugins for markdown-it-py"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -889,7 +981,7 @@ testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
 name = "mdurl"
 version = "0.1.2"
 description = "Markdown URL utilities"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -1505,6 +1597,29 @@ pygments = ">=2.6.0,<3.0.0"
 jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
 
 [[package]]
+name = "ruamel.yaml"
+version = "0.17.21"
+description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
+category = "main"
+optional = false
+python-versions = ">=3"
+
+[package.dependencies]
+"ruamel.yaml.clib" = {version = ">=0.2.6", markers = "platform_python_implementation == \"CPython\" and python_version < \"3.11\""}
+
+[package.extras]
+docs = ["ryd"]
+jinja2 = ["ruamel.yaml.jinja2 (>=0.2)"]
+
+[[package]]
+name = "ruamel.yaml.clib"
+version = "0.2.7"
+description = "C version of reader, parser and emitter for ruamel.yaml derived from libyaml"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
 name = "scikit-learn"
 version = "1.0.2"
 description = "A set of python modules for machine learning and data mining"
@@ -1537,21 +1652,28 @@ numpy = ">=1.18.5,<1.25.0"
 
 [[package]]
 name = "seaborn"
-version = "0.12.2"
+version = "0.13.0.dev0"
 description = "Statistical data visualization"
 category = "main"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
+develop = false
 
 [package.dependencies]
-matplotlib = ">=3.1,<3.6.1 || >3.6.1"
-numpy = ">=1.17,<1.24.0 || >1.24.0"
-pandas = ">=0.25"
+matplotlib = ">=3.3,<3.6.1 || >3.6.1"
+numpy = ">=1.20,<1.24.0 || >1.24.0"
+pandas = ">=1.2"
 
 [package.extras]
 dev = ["pytest", "pytest-cov", "pytest-xdist", "flake8", "mypy", "pandas-stubs", "pre-commit", "flit"]
 docs = ["numpydoc", "nbconvert", "ipykernel", "sphinx-copybutton", "sphinx-issues", "sphinx-design", "pyyaml", "pydata_sphinx_theme (==0.10.0rc2)"]
-stats = ["scipy (>=1.3)", "statsmodels (>=0.10)"]
+stats = ["scipy (>=1.7)", "statsmodels (>=0.12)"]
+
+[package.source]
+type = "git"
+url = "https://github.com/mwaskom/seaborn.git"
+reference = "master"
+resolved_reference = "72faf27f440522fa558df33258ae9b4ea59e161f"
 
 [[package]]
 name = "send2trash"
@@ -1775,6 +1897,17 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "uc-micro-py"
+version = "1.0.1"
+description = "Micro subset of unicode data files for linkify-it-py projects."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+test = ["coverage", "pytest", "pytest-cov"]
+
+[[package]]
 name = "urllib3"
 version = "1.26.12"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -1888,7 +2021,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.10"
-content-hash = "1d35444c2635c2d73c544135580e0321a9d9cfc14d4f7d5600e8d00ec324b1fc"
+content-hash = "a1f52f785b75274db565a254b4a90db3382deb826d3da5ff04ddaab6ad1325bf"
 
 [metadata.files]
 anyio = []
@@ -1948,12 +2081,18 @@ jupyterlab-widgets = []
 jupytext = []
 kiwisolver = []
 lazy-loader = []
+linkify-it-py = []
 littleutils = []
 lxml = []
 markdown-it-py = []
 markupsafe = []
 matplotlib = []
 matplotlib-inline = []
+mdformat = []
+mdformat-footnote = []
+mdformat-frontmatter = []
+mdformat-gfm = []
+mdformat-tables = []
 mdit-py-plugins = []
 mdurl = []
 mistune = []
@@ -2004,6 +2143,8 @@ qtpy = []
 regex = []
 requests = []
 rich = []
+"ruamel.yaml" = []
+"ruamel.yaml.clib" = []
 scikit-learn = []
 scipy = []
 seaborn = []
@@ -2026,6 +2167,7 @@ tornado = []
 traitlets = []
 typeguard = []
 typing-extensions = []
+uc-micro-py = []
 urllib3 = []
 virtualenv = []
 watermark = []

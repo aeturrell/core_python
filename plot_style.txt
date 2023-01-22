@@ -31,7 +31,6 @@ legend.labelspacing:  0.4
 text.usetex: False
 axes.titlelocation: left
 axes.formatter.use_mathtext: True
-axes.autolimit_mode: round_numbers
 axes.labelpad: 3
 axes.formatter.limits: -4, 4
 axes.labelcolor: black
@@ -40,6 +39,5 @@ axes.linewidth: 0.6
 axes.spines.right : False
 axes.spines.top : False
 figure.titlesize: 18
-figure.dpi: 150
+figure.dpi: 300
 figure.figsize: 6, 3
-backend: svg
