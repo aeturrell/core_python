@@ -791,7 +791,7 @@ test = ["pytest", "black", "pre-commit", "flake8"]
 name = "linkify-it-py"
 version = "1.0.3"
 description = "Links recognition library with FULL unicode support."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -830,7 +830,7 @@ source = ["Cython (>=0.29.7)"]
 name = "markdown-it-py"
 version = "2.1.0"
 description = "Python port of markdown-it. Markdown parsing, done right!"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -891,7 +891,7 @@ traitlets = "*"
 name = "mdformat"
 version = "0.7.16"
 description = "CommonMark compliant Markdown formatter"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -904,7 +904,7 @@ tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
 name = "mdformat-footnote"
 version = "0.1.1"
 description = "An mdformat plugin for parsing/validating footnotes"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -920,7 +920,7 @@ test = ["pytest (>=6.0,<7.0)", "coverage", "pytest-cov"]
 name = "mdformat-frontmatter"
 version = "2.0.1"
 description = "An mdformat plugin for parsing / ignoring frontmatter."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -937,7 +937,7 @@ test = ["pytest (>=6.0,<7.0)", "coverage", "pytest-cov"]
 name = "mdformat-gfm"
 version = "0.3.5"
 description = "Mdformat plugin for GitHub Flavored Markdown compatibility"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7,<4.0"
 
@@ -951,7 +951,7 @@ mdit-py-plugins = ">=0.2.0,<0.4.0"
 name = "mdformat-tables"
 version = "0.4.1"
 description = "An mdformat plugin for rendering tables."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6.1"
 
@@ -965,7 +965,7 @@ test = ["pytest (>=6.0,<7.0)", "coverage", "pytest-cov"]
 name = "mdit-py-plugins"
 version = "0.3.1"
 description = "Collection of plugins for markdown-it-py"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -981,7 +981,7 @@ testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
 name = "mdurl"
 version = "0.1.2"
 description = "Markdown URL utilities"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -1600,7 +1600,7 @@ jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
 name = "ruamel.yaml"
 version = "0.17.21"
 description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3"
 
@@ -1615,7 +1615,7 @@ jinja2 = ["ruamel.yaml.jinja2 (>=0.2)"]
 name = "ruamel.yaml.clib"
 version = "0.2.7"
 description = "C version of reader, parser and emitter for ruamel.yaml derived from libyaml"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -1900,7 +1900,7 @@ python-versions = ">=3.7"
 name = "uc-micro-py"
 version = "1.0.1"
 description = "Micro subset of unicode data files for linkify-it-py projects."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -1941,7 +1941,7 @@ testing = ["coverage (>=6.2)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7
 name = "watermark"
 version = "2.3.1"
 description = "IPython magic function to print date/time stamps and various system information."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -2021,7 +2021,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8,<3.10"
-content-hash = "a1f52f785b75274db565a254b4a90db3382deb826d3da5ff04ddaab6ad1325bf"
+content-hash = "5b121ae9e8f822e85ac42182c0bc966d795e5230b78726b6ad35bbfafe4812a8"
 
 [metadata.files]
 anyio = []

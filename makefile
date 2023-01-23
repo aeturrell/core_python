@@ -30,6 +30,8 @@ specialmdtwo: getting_started_in_python.ipynb
 # formal all of the md files
 format:
 	poetry run mdformat $(MDFILES)
+	poetry run mdformat technical_reference.md
+	poetry run mdformat getting_started_in_python.md
 
 # Move all of the created files to the outputs directory
 move:
