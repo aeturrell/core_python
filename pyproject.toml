@@ -20,6 +20,7 @@ black-nb = "^0.7"
 regex = "^2022.9.13"
 html5lib = "^1.1"
 seaborn = {git = "https://github.com/mwaskom/seaborn.git"}
+lets-plot = "^3.2.0"
 
 [tool.poetry.dev-dependencies]
 jupytext = "^1.13.0"

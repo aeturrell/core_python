@@ -35,10 +35,10 @@ format:
 
 # Move all of the created files to the outputs directory
 move:
-	mv $(MDFILES) outputs/ && \
-	mv $(MDDIRECS) outputs/ && \
+	mv getting_started_in_python.md outputs/ && \
 	mv technical_reference.md outputs/ && \
-	mv getting_started_in_python.md outputs/
+	mv $(MDFILES) outputs/ && \
+	mv $(MDDIRECS) outputs/
 
 # Remove the created files that are in outputs/
 clean:
