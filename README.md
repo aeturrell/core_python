@@ -1,5 +1,7 @@
 # core_python
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/aeturrell/core_python/HEAD)
+
 This repository has all Python versions of exercises from the CORE Econ textbook "Doing Economics". Find the originals here: https://www.core-econ.org/doing-economics/index.html.
 
 This was a passion project to bring the joy of doing analysis with Python to the next generation of economists.
