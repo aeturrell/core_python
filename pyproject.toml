@@ -2,11 +2,11 @@
 name = "core_python"
 version = "0.1.0"
 description = "Python versions of exercises from the CORE Econ textbook"
-authors = ["Your Name <you@example.com>"]
+authors = [""]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.10"
+python = ">=3.9,<3.12"
 pandas = "^2.0.3"
 jupyterlab = "^3.2.1"
 matplotlib = "^3.4.3"
