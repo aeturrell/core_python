@@ -2,7 +2,7 @@
 
 .PHONY: all clean
 
-all: md specialmdone specialmdtwo fixletsplot format move
+all: md specialmdone specialmdtwo format fixletsplot move
 
 # Figure out which ipynb files to execute and convert to markdown
 NOTEBOOKS=$(wildcard empirical_*.ipynb)
@@ -29,7 +29,7 @@ specialmdtwo: getting_started_in_python.ipynb
 
 # sorts a problem with letsplot conversion of figures to md code
 fixletsplot:
-	poetry run python fix_letsplot_conv_to_md.py 
+	poetry run python fix_letsplot_conv_to_md.py
 
 # format all of the md files
 format:
@@ -41,8 +41,8 @@ format:
 move:
 	mv getting_started_in_python.md outputs/ && \
 	mv technical_reference.md outputs/ && \
-	mv $(MDFILES) outputs/ && \
-	mv $(MDDIRECS) outputs/
+	mv -f $(MDFILES) outputs/ && \
+	mv -f $(MDDIRECS) outputs/
 
 # Remove the created files that are in outputs/
 clean:

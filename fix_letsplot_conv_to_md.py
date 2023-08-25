@@ -31,6 +31,9 @@ if __name__ == "__main__":
     sec_rep_pat = r"</style>"
     trd_srch_pat = r"</g>\n```"
     trd_rep_pat = r"</g>"
+    fth_srch_pat = r"```\s*<g>"
+    fth_rep_pat = r"<g>"
     replace_text_in_files(directory_path, search_pattern, replace_pattern)
     replace_text_in_files(directory_path, sec_srch_pat, sec_rep_pat)
     replace_text_in_files(directory_path, trd_srch_pat, trd_rep_pat)
+    replace_text_in_files(directory_path, fth_srch_pat, fth_rep_pat)
