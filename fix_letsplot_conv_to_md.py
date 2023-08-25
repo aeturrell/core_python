@@ -27,5 +27,10 @@ if __name__ == "__main__":
     replace_pattern = (
         r"\1<g>"  # Replacement pattern with captured spaces \1 followed by "<g>"
     )
-
+    sec_srch_pat = r"```\n</style>"
+    sec_rep_pat = r"</style>"
+    trd_srch_pat = r"</g>\n```"
+    trd_rep_pat = r"</g>"
     replace_text_in_files(directory_path, search_pattern, replace_pattern)
+    replace_text_in_files(directory_path, sec_srch_pat, sec_rep_pat)
+    replace_text_in_files(directory_path, trd_srch_pat, trd_rep_pat)
